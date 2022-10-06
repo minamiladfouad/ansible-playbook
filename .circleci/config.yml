@@ -13,7 +13,7 @@ commands:
           when: on_fail
           command: |
             echo myStack-${CIRCLE_WORKFLOW_ID:0:5}
-            aws cloudformation delete-stack --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5}
+            aws cloudformation delete-stack --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} --profile admin
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
